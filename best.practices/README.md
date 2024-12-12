@@ -9,9 +9,9 @@ the sake of agnosticity and extensibility. This document points out some of them
 ## Status of this document
 
 The Best Practices are created and published by the [Eclipse Dataspace Working Group](https://dataspace.eclipse.org/).
-They current don't match releases but refer to the latest published version.
+They currently don't match releases but refer to the latest published version.
 
 ## Introduction
 
 The Dataspace Protocol has reached stability and adoption in multiple Dataspaces. These and future Dataspaces cover 
-varying use-cases. As such each poses requirements that the protocol must accommodate.
+varying use cases. As such, each poses requirements that the protocol must accommodate.

@@ -16,7 +16,7 @@ can serve as such an authentication mechanism.
 
 ## Securing access to `Dataset`s
 
-Granting access to business data is out of scope of the DSP specification. However, the DSP is a vehicle to exchange 
+Granting access to data, i.e., the data transaction, is out of scope of the DSP specification. However, the DSP is a vehicle to exchange 
 the necessary information to grant access to such data. Initially, a `Dataset` is advertised in the `Catalog`. Consumers
 are encouraged to start the `Contract Negotiation` process. The result of successful the DSP-state-machines' happy path 
 is the transfer of a `DataAddress` object. This object declares the means of transferring the business data and may
