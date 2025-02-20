@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HttpTransferStartMessageSchema",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/definitions/HttpPullTransferStartMessage"
+    }
+  ],
+  "$id": "https://w3id.org/dspace/2025/1/transfer/http-pull-transfer-start-message-schema.json",
+  "definitions": {
+    "HttpPullTransferStartMessage": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "https://w3id.org/dspace/2025/1/transfer/transfer-start-message-schema.json"
+        }
+      ],
+      "properties": {
+        "dataAddress": {
+          "$ref": "http-pull-dataaddress-schema.json#/definitions/HttpPullDataAddress"
+        }
+      },
+      "required": [
+        "dataAddress"
+      ]
+    }
+  }
+}

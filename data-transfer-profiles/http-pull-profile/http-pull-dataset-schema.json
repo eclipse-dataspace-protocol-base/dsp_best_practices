@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HttpDatasetSchema",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/definitions/HttpPullRootDataset"
+    }
+  ],
+  "$id": "https://w3id.org/dspace/2025/1/http-pull-profile/catalog/dataset-schema.json",
+  "definitions": {
+    "HttpPullDataset": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "https://w3id.org/dspace/2025/1/catalog/dataset-schema.json#/definitions/AbstractDataset"
+        }
+      ],
+      "properties": {
+        "distribution": {
+          "type": "array",
+          "contains": {
+            "type": "object",
+            "$ref": "#/definitions/HttpPullDistribution"
+          }
+        }
+      },
+      "required": [
+        "hasPolicy",
+        "distribution"
+      ]
+    },
+    "HttpPullRootDataset": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/HttpPullDataset"
+        }
+      ],
+      "properties": {
+        "@context": {
+          "$ref": "https://w3id.org/dspace/2025/1/common/context-schema.json"
+        }
+      },
+      "required": [
+        "@context"
+      ]
+    },
+    "HttpPullDistribution":  {
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "HttpData-PULL"
+        }
+      },
+      "required": [
+        "format"
+      ]
+    }
+  }
+}

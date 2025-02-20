@@ -1,0 +1,22 @@
+{
+  "@type": "DataAddress",
+  "endpointType": "https://w3id.org/idsa/v4.1/HTTP",
+  "endpoint": "http://example.com",
+  "endpointProperties": [
+    {
+      "@type": "EndpointProperty",
+      "name": "refresh-token",
+      "value": "TOKEN"
+    },
+    {
+      "@type": "EndpointProperty",
+      "name": "refresh-endpoint",
+      "value": "https://abc"
+    },
+    {
+      "@type": "EndpointProperty",
+      "name": "authentication",
+      "value": "some"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HttpDataAddress",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/definitions/HttpPullDataAddress"
+    }
+  ],
+  "$id": "https://w3id.org/dspace/2025/1/transfer/http-pull-transfer-schema.json",
+  "definitions": {
+    "HttpPullDataAddress": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "https://w3id.org/dspace/2025/1/transfer/data-address-schema.json"
+        }
+      ],
+      "properties": {
+        "endpointProperties": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "const": "refresh-token"
+                }
+              },
+              "required": [
+                "@type",
+                "name",
+                "value"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "const": "refresh-endpoint"
+                }
+              },
+              "required": [
+                "@type",
+                "name",
+                "value"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "const": "authentication"
+                }
+              },
+              "required": [
+                "@type",
+                "name",
+                "value"
+              ]
+            }
+          ],
+          "minItems": 3
+        }
+      },
+      "required": [
+        "endpointProperties"
+      ]
+    }
+  }
+}
