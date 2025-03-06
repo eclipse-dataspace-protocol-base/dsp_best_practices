@@ -1,5 +1,16 @@
 # Data Transfer Profiles
 
+<!-- TOC -->
+* [Data Transfer Profiles](#data-transfer-profiles)
+  * [Data Transfer Protocol](#data-transfer-protocol)
+    * [Catalog Response](#catalog-response)
+    * [Transfer Request](#transfer-request)
+    * [DataAddress](#dataaddress)
+  * [Securing access to `Dataset`s](#securing-access-to-datasets)
+  * [Additional Properties on Datasets](#additional-properties-on-datasets)
+  * [Filtering](#filtering)
+<!-- TOC -->
+
 ## Data Transfer Protocol
 
 To cover the data transfer, a Dataspace must agree on a predefined set of transport protocols and define how they are
@@ -95,7 +106,8 @@ for the Dataset.
   }
 ```
 
-These are unspecified by the DSP but must be further defined for each Data Transfer Protocol.j
+`format`, `endpoint`, `endpointType` and the corresponding set of `endpointProperties` are unspecified by the DSP but 
+must be further defined for each Data Transfer Protocol.
 
 ## Securing access to `Dataset`s
 
