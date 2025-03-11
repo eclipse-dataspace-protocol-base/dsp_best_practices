@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CatalogSchema",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/definitions/HttpPullRootCatalog"
+    }
+  ],
+  "$id": "https://w3id.org/dspace/2025/1/http-pull-profile/catalog/catalog-schema.json",
+  "definitions": {
+    "HttpPullRootCatalog": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/HttpPullCatalog"
+        }
+      ],
+      "properties": {
+        "@context": {
+          "$ref": "https://w3id.org/dspace/2025/1/common/context-schema.json"
+        },
+        "participantId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@context",
+        "participantId"
+      ]
+    },
+    "HttpPullCatalog": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "https://w3id.org/dspace/2025/1/catalog/catalog-schema.json#/definitions/Catalog"
+        }
+      ],
+      "properties": {
+        "dataset": {
+          "type": "array",
+          "contains": {
+            "type": "object",
+            "$ref": "http-pull-dataset-schema.json#/definitions/HttpPullDataset"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "@id",
+        "@type"
+      ],
+      "anyOf": [
+        {
+          "not": {
+            "required": [
+              "hasPolicy"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

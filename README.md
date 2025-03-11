@@ -1,2 +1,3 @@
-# dsp_best_practices
-Best Practices in conjunction with the usage and development of the Dataspace Protocol
+# Best Practices involving the Dataspace Protocol
+
+This repository collects various material that involve extending, implementing and working with the Dataspace Protocol.
